@@ -1,0 +1,82 @@
+.nav-info {
+  display: flex;
+  font-size: 0.7rem;
+  color: #004884;
+  flex: 0.33;
+  flex-flow: column nowrap;
+}
+.nav-info ul li {
+  font-size: 0.8rem;
+  flex-wrap: nowrap;
+}
+.nav-menu {
+  display: flex;
+  flex: 0.33;
+  justify-content: end;
+  gap: 2.5rem;
+}
+
+.nav-menu li {
+  font-weight: bold;
+  text-wrap: nowrap;
+
+  color: #004884;
+}
+.nav-menu li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.navbar-links-smallscreen-menu {
+  display: none;
+  cursor: pointer;
+}
+.overlay-close {
+  cursor: pointer;
+}
+
+.navbar-links-smallscreen-overlay {
+  position: fixed;
+  top: 100;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #004884;
+  background-size: cover;
+  background-position: center center;
+
+  transition: 1s ease;
+  color: white;
+  flex-direction: column;
+  z-index: 5;
+}
+.navbar-links-smallscreen-overlay .overlay-close {
+  font-size: 27px;
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.navbar-links-smallscreen {
+  margin: 5rem;
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+.navbar-links-smallscreen:first-child {
+  margin-top: 20rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-info {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .nav-menu {
+    display: none;
+  }
+  .navbar-links-smallscreen-menu {
+    display: block;
+  }
+}

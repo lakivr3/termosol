@@ -1,33 +1,114 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.slide-bottom {
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.container {
+  position: relative;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes sun {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.logo {
+  z-index: 1;
+  width: 100%;
+  height: auto;
+}
+
+.light {
+  z-index: -1;
+  position: absolute;
+  width: 4px;
+  height: 25px;
+  background-color: #ffd400;
+  transform-origin: bottom center;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  top: 20%;
+  left: 56.3%;
+  margin-left: -2px;
+  margin-top: -40px;
+}
+
+.lights {
+  z-index: -900;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Positioning each light in a semi-circular arrangement */
+#light1 {
+  transform: rotate(0deg);
+}
+#light2 {
+  transform: rotate(45deg);
+}
+#light3 {
+  transform: rotate(90deg);
+}
+#light4 {
+  transform: rotate(135deg);
+}
+#light5 {
+  transform: rotate(180deg);
+}
+#light6 {
+  transform: rotate(225deg);
+}
+#light7 {
+  transform: rotate(270deg);
+}
+#light8 {
+  transform: rotate(315deg);
+}
+
+/* Animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.container {
+  animation: sun 5s linear infinite;
 }

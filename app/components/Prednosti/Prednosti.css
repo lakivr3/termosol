@@ -1,0 +1,113 @@
+.prednost {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 70vh;
+  overflow: hidden;
+}
+.prednost-naslov {
+  background-color: #004884;
+  display: flex;
+  flex: 0.25;
+  z-index: 50;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.prednost-naslov-h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+.prednost-naslov-h1-span {
+  color: #ffd400;
+  font-size: 6rem;
+}
+.prednost-main {
+  position: relative;
+  display: flex;
+  flex: 0.75;
+  align-items: center;
+}
+.prednost-main-icon {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 45%;
+  flex: 0.4;
+  background-color: #ffd400;
+  border-right: 8px solid #004884;
+  justify-content: center;
+  align-items: center;
+}
+.prednost-main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  height: 100%;
+  z-index: -50;
+  flex: 1;
+}
+.prednost-main-content-div {
+  display: flex;
+  flex: 1;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 6px solid #004884;
+}
+.prednost-main-content-div-p {
+  color: #004884;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .prednost-naslov-h1 {
+    margin: 1rem 2rem 1rem 2rem;
+    font-size: 3rem;
+  }
+  .prednost-naslov-h1-span {
+    font-size: 4rem;
+  }
+  .prednost-main-content-div {
+    width: 100%;
+    justify-content: end;
+    padding-right: 2rem;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .prednost-main-content-div {
+    justify-content: end;
+    padding-right: 2rem;
+  }
+}
+@media screen and (max-width: 950px) {
+  .prednost-main-content-div-p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .prednost-main-content-div-p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .prednost-main-icon {
+    display: none;
+  }
+  .prednost-main-content-div {
+    justify-content: start;
+    padding-left: 2rem;
+  }
+  .prednost-naslov-h1 {
+    text-align: start;
+  }
+}
+@media screen and (max-width: 600px) {
+  .prednost-naslov-h1 {
+    font-size: 2rem;
+  }
+}

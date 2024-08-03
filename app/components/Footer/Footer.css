@@ -1,0 +1,48 @@
+.theend {
+  background-color: #004884;
+  display: flex;
+  color: #fff;
+
+  flex-direction: column;
+}
+.theend-h1 {
+  margin: 1rem 1rem 0 1rem;
+  text-align: center;
+  font-size: 12px;
+}
+.theend-social {
+  display: flex;
+  margin: 1rem 0 1rem 0;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 30px;
+}
+.facebook:hover {
+  cursor: pointer;
+  color: #ffd400;
+}
+.instagram:hover {
+  cursor: pointer;
+  border-radius: 200px;
+  color: #ffd400;
+
+  /* background: linear-gradient(
+        154deg,
+        rgba(203, 3, 200, 1) 0%,
+        rgba(17, 0, 212, 1) 9%,
+        rgba(238, 130, 238, 1) 100%
+      ); */
+}
+.twitter:hover {
+  cursor: pointer;
+  color: rgb(48, 99, 219);
+}
+.youtube:hover {
+  cursor: pointer;
+  color: red;
+}
+.span {
+  color: #ffd400;
+
+  font-weight: bold;
+}
