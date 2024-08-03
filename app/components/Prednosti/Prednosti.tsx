@@ -19,11 +19,9 @@ const Prednosti = () => {
   const [iconSize, setIconSize] = useState(330);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const handleResize = () => {
-        if (window.innerWidth <= 1000) setIconSize(250);
-        if (window.innerWidth <= 700) setIconSize(200);
-      };
+    const handleResize = () => {
+      if (window.innerWidth <= 1000) setIconSize(250);
+      if (window.innerWidth <= 700) setIconSize(200);
 
       window.addEventListener("resize", handleResize);
 
@@ -34,7 +32,7 @@ const Prednosti = () => {
       return () => {
         window.removeEventListener("resize", handleResize);
       };
-    }
+    };
   }, []);
   return (
     <div className=" prednost">
