@@ -22,6 +22,7 @@ const Pictures = () => {
     right: 50,
     left: 0,
   });
+  const [isMobile, setIsMobile] = useState(false);
   const innerCarouselRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -35,15 +36,19 @@ const Pictures = () => {
     };
 
     const handleResize = () => {
+      setIsMobile(window.innerWidth <= 700);
       updateConstraints();
     };
 
-    updateConstraints();
-    window.addEventListener("resize", handleResize);
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth <= 700);
+      updateConstraints();
+      window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, []);
 
   return (
@@ -61,9 +66,7 @@ const Pictures = () => {
               key={index}
               className="item"
               variants={
-                window.innerWidth <= 840
-                  ? {}
-                  : slideIn("down", "tween", 0.2 * index, 1)
+                !isMobile ? slideIn("down", "tween", 0.2 * index, 1) : undefined
               }
             >
               <img src={image} alt={`Picture ${index}`} />
