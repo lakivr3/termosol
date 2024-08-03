@@ -26,7 +26,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/gdesmo/page.jsx"
+    "app/gdesmo/page.tsx"
   ],
   "exclude": ["node_modules"]
 }
