@@ -1,9 +1,13 @@
 "use client";
 import React, { useRef } from "react";
-
 import "./Galerija.css";
-import Pictures from "../utilities/Pictures/Pictures";
 import SectionWrapper from "../utilities/SectionWraper";
+
+import dynamic from "next/dynamic";
+
+const Pictures = dynamic(() => import("../utilities/Pictures/Pictures"), {
+  ssr: false,
+});
 
 const pictures = [
   "https://scontent.fbeg5-1.fna.fbcdn.net/v/t39.30808-6/363356670_1799632110474383_7058529570321973589_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=piNRNqfrC70Q7kNvgHIY6gm&_nc_ht=scontent.fbeg5-1.fna&gid=AqOlcCexfrrlgToFA_b6gAQ&oh=00_AYCO5w3jQBhZ4ANYdL67I-e56u6m7X3SavqdOpSWN_UdhA&oe=66B1970C  ",

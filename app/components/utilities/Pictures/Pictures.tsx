@@ -22,57 +22,85 @@ const Pictures = () => {
     right: 50,
     left: 0,
   });
+  const [isMobile, setIsMobile] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   const innerCarouselRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    setIsClient(true);
+
     const updateConstraints = () => {
       if (innerCarouselRef.current) {
         const totalWidth = innerCarouselRef.current.scrollWidth;
         const viewportWidth = window.innerWidth;
         const leftConstraint = -(totalWidth - viewportWidth);
-        setDragConstraints({ right: 50, left: leftConstraint });
+        setDragConstraints({ right: 50, left: leftConstraint - 100 });
       }
     };
 
     const handleResize = () => {
+      setIsMobile(window.innerWidth <= 840);
       updateConstraints();
     };
 
-    updateConstraints();
-    window.addEventListener("resize", handleResize);
+    if (isClient) {
+      setIsMobile(window.innerWidth <= 840);
+      updateConstraints();
+      window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, [isClient]);
 
-  return (
-    <div>
-      <motion.div className="carousel">
-        <motion.div
-          ref={innerCarouselRef}
-          drag="x"
-          dragConstraints={dragConstraints}
-          className="inner-carousel"
-          initial={{ x: 0 }}
-        >
-          {pictures.map((image: string, index: number) => (
-            <motion.div
-              key={index}
-              className="item"
-              variants={
-                window.innerWidth <= 840
-                  ? {}
-                  : slideIn("down", "tween", 0.2 * index, 1)
-              }
-            >
-              <img src={image} alt={`Picture ${index}`} />
-            </motion.div>
-          ))}
+  if (!isClient) {
+    return null; // Render nothing on the server side
+  }
+  if (!isMobile)
+    return (
+      <div>
+        <motion.div className="carousel">
+          <motion.div
+            ref={innerCarouselRef}
+            drag="x"
+            dragConstraints={dragConstraints}
+            className="inner-carousel"
+            initial={{ x: 0 }}
+          >
+            {pictures.map((image: string, index: number) => (
+              <motion.div
+                key={index}
+                className="item"
+                variants={slideIn("down", "tween", 0.2 * index, 1)}
+              >
+                <img src={image} alt={`Picture ${index}`} />
+              </motion.div>
+            ))}
+          </motion.div>
         </motion.div>
-      </motion.div>
-    </div>
-  );
+      </div>
+    );
+  else
+    return (
+      <div>
+        <div className="carousel">
+          <motion.div
+            ref={innerCarouselRef}
+            drag="x"
+            dragConstraints={dragConstraints}
+            className="inner-carousel"
+            initial={{ x: 0 }}
+          >
+            {pictures.map((image: string, index: number) => (
+              <motion.div key={index} className="item">
+                <img src={image} alt={`Picture ${index}`} />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    );
 };
 
 export default SectionWrapper(Pictures, "pictures");

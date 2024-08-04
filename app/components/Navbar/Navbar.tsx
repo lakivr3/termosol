@@ -22,6 +22,7 @@ const Navbar = () => {
   const handleLinkClick = (href: string) => {
     setActive(href);
     setToggle(false); // Close menu on link click
+    route.push(`/${href}`);
   };
 
   return (
@@ -31,12 +32,15 @@ const Navbar = () => {
           <li className="text-nowrap">Адреса: Горњи Нерадовац бб, Врање</li>
           <li className="text-nowrap">МБ: 21179868</li>
           <li className="text-nowrap">ПИВ: 109425464</li>
-          <li className="text-nowrap">+381 60 566 13 44</li>
+          <li className="text-nowrap">Tel: +381 60 566 13 44</li>
         </ul>
 
         <div className="flex w-[200px] nav-logo hover:cursor-pointer">
           <Image
-            onClick={() => route.push("/")}
+            onClick={() => {
+              setActive("/");
+              route.push("/");
+            }}
             alt="logo"
             className="logo"
             src={logo}
@@ -50,24 +54,29 @@ const Navbar = () => {
               id={link.href}
               className={`${
                 active === link.href
-                  ? "text-white border-b-2 border-[#ffd400]"
+                  ? "text-[#ffd400] border-b-2 border-[#ffd400]"
                   : "text-[#004884]"
               } hover:text-[#ffd400] font-medium cursor-pointer`}
             >
-              <Link href={link.href} onClick={() => handleLinkClick(link.href)}>
-                {link.label}
-              </Link>
+              <p onClick={() => handleLinkClick(link.href)}>{link.label}</p>
             </li>
           ))}
           <li
-            onClick={() => route.push("/gdesmo")}
             className={`${
               active === "/gdesmo"
                 ? "text-[#ffd400] border-b-2 border-[#ffd400]"
                 : "text-[#004884]"
             } hover:text-[#ffd400]  font-medium cursor-pointer`}
           >
-            Где смо?
+            <p
+              onClick={() => {
+                setActive("/gdesmo");
+                setToggle(false);
+                route.push("/gdesmo");
+              }}
+            >
+              Где смо?
+            </p>
           </li>
         </ul>
         {!toggle && (
@@ -92,25 +101,21 @@ const Navbar = () => {
               <li
                 key={link.label}
                 className={`${
-                  active === link.href
-                    ? "text-[#ffd400] border-b-2 border-[#ffd400]"
-                    : "text-[#004884]"
+                  active === link.href ? "text-[#ffd400]   " : "text-white"
                 } hover:text-[#ffd400] font-medium cursor-pointer`}
               >
-                <Link
-                  href={link.href}
-                  onClick={() => handleLinkClick(link.href)}
-                >
-                  {link.label}
-                </Link>
+                <p onClick={() => handleLinkClick(link.href)}>{link.label}</p>
               </li>
             ))}
             <li
-              onClick={() => route.push("/gdesmo")}
+              onClick={() => {
+                setActive("/gdesmo");
+                setToggle(false);
+
+                route.push("/gdesmo");
+              }}
               className={`${
-                active === "/gdesmo"
-                  ? "text-[#ffd400] border-b-2 border-[#ffd400]"
-                  : "text-[#004884]"
+                active === "/gdesmo" ? "text-[#ffd400] " : "text-white"
               } hover:text-[#ffd400]  font-medium cursor-pointer`}
             >
               Где смо?

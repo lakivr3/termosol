@@ -19,8 +19,6 @@
 .nav-menu li {
   font-weight: bold;
   text-wrap: nowrap;
-
-  color: #004884;
 }
 .nav-menu li:hover {
   cursor: pointer;
