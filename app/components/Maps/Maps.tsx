@@ -8,14 +8,14 @@ import markerIconPng from "@/public/pop.png";
 import termosol from "@/public/termosol-logo.png";
 import Image from "next/image";
 
-const position: [number, number] = [42.50409, 21.86497];
+const position: [number, number] = [42.526536, 21.88982];
 
 const MyMap: React.FC = () => {
   return (
     <div>
       <MapContainer
         center={position}
-        zoom={14}
+        zoom={16}
         scrollWheelZoom={false}
         style={{ height: "100vh", width: "100%" }}
       >
