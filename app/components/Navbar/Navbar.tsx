@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 const links = [
   { label: "О нама", href: "#onama" }, // Add # for section links
   { label: "Галерија", href: "#galerija" },
-  { label: "Констакт", href: "#kontakt" },
+  { label: "Контакт", href: "#kontakt" },
 ];
 
 const Navbar = () => {
@@ -31,8 +31,8 @@ const Navbar = () => {
         <ul className="nav-info">
           <li className="text-nowrap">Адреса: Горњи Нерадовац бб, Врање</li>
           <li className="text-nowrap">МБ: 21179868</li>
-          <li className="text-nowrap">ПИВ: 109425464</li>
-          <li className="text-nowrap">Tel: +381 60 566 13 44</li>
+          <li className="text-nowrap">ПИБ: 109425464</li>
+          <li className="text-nowrap">Тел.: +381 60 566 13 44</li>
         </ul>
 
         <div className="flex w-[200px] nav-logo hover:cursor-pointer">

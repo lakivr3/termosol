@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   AiOutlineYoutube,
@@ -28,8 +29,21 @@ const Footer = () => {
         </div>
       </h1>
       <div className="theend-social">
-        <AiOutlineFacebook className="facebook" />
-        <AiOutlineInstagram className="instagram" />
+        <AiOutlineFacebook
+          onClick={() =>
+            window.open("https://www.facebook.com/termo.sol.vr", "_blank")
+          }
+          className="facebook"
+        />
+        <AiOutlineInstagram
+          onClick={() =>
+            window.open(
+              "https://www.instagram.com/termosol_ama_tekosolar/",
+              "_blank"
+            )
+          }
+          className="instagram"
+        />
       </div>
     </footer>
   );

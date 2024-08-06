@@ -9,10 +9,8 @@ const Hero = () => {
   return (
     <motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="hero ">
       <div className="hero-content">
-        <h1 className="hero-h1-first">
-          ПРВО ПРИВРЕДНО ДРУШТВО ЗА ПРОИЗВОДЊУ И ПРОМЕТ{" "}
-        </h1>
-        <h1 className="hero-h1-second"> СОЛАРНИХ ПАНЕЛА У ЈУЖНОЈ СРБИЈИ</h1>
+        <h1 className="hero-h1-first">ПРВО ПРИВРЕДНО ДРУШТВО ЗА ПРОМЕТ </h1>
+        <h1 className="hero-h1-second"> СОЛАРНИХ КОЛЕКТОРА У ЈУЖНОЈ СРБИЈИ</h1>
       </div>
     </motion.div>
   );
