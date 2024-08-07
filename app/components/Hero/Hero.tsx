@@ -11,6 +11,7 @@ const Hero = () => {
       <div className="hero-content">
         <h1 className="hero-h1-first">ПРВО ПРИВРЕДНО ДРУШТВО ЗА ПРОМЕТ </h1>
         <h1 className="hero-h1-second"> СОЛАРНИХ КОЛЕКТОРА У ЈУЖНОЈ СРБИЈИ</h1>
+        {/* <p className="hero-p">Уштеда и до 60% рачуна за струју!</p> */}
       </div>
     </motion.div>
   );

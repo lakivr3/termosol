@@ -32,7 +32,19 @@ const MyMap: React.FC = () => {
           })}
         >
           <Popup>
-            <Image src={termosol} width={200} height={150} alt="termosol" />
+            <Image
+              className="cursor-pointer"
+              onClick={() =>
+                window.open(
+                  "https://maps.app.goo.gl/h5QU1L1kBCkDXZsv8",
+                  "_blank"
+                )
+              }
+              src={termosol}
+              width={200}
+              height={150}
+              alt="termosol"
+            />
           </Popup>
         </Marker>
       </MapContainer>
