@@ -13,12 +13,6 @@ const Hero = () => {
       <div className="hero-content items-center">
         <h1 className="hero-h1-first">ПРВО ПРИВРЕДНО ДРУШТВО ЗА ПРОМЕТ </h1>
         <h1 className="hero-h1-second"> СОЛАРНИХ КОЛЕКТОРА У ЈУЖНОЈ СРБИЈИ</h1>
-        <div
-          className="px-4 py-2 bg-[#ffd400]  mt-32 rounded-lg cursor-pointer"
-          onClick={() => route.push("/#kontakt")}
-        >
-          <p className="hero-p">Уштеда и до 60% рачуна за струју!</p>
-        </div>
       </div>
     </motion.div>
   );

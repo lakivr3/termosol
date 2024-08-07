@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="theend ">
       <h1 className="theend-h1 ">
-        Термосол д.о.о. , Врање, Србија. Сва права задржана.
+        "Термосол" д.о.о. , Врање, Србија. Сва права задржана.
         <a className="span mr-5 ml-1" href="mailto:djordjevicsasa24@gmail.com">
           <span className="text-white">E-Mail:{"  "}</span>
           djordjevicsasa24@gmail.com
@@ -24,7 +24,7 @@ const Footer = () => {
             <a href="tel:+381605661344">+381 60 566 13 44</a> {"  "}
           </span>
           <span className="span ml-[57px]">
-            <a href="tel:+381612685093"></a>+381 61 268 50 93
+            <a href="tel:+381612685093">+381 61 268 50 93</a>
           </span>
         </div>
       </h1>
