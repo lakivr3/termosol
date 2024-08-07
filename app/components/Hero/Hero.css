@@ -12,6 +12,7 @@
 }
 .hero-content {
   display: flex;
+  margin: 0 1rem 0 1rem;
   flex-direction: column;
 }
 
@@ -32,10 +33,9 @@
   /* word-spacing: 0.8rem; */
 }
 .hero-p {
-  font-size: 2rem;
-  text-decoration: underline;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #fff;
+  color: #004884;
 }
 
 @media screen and (max-width: 800px) {
@@ -55,8 +55,14 @@
 
     font-size: 2.4rem;
   }
+  .hero-p {
+    font-size: 1.2rem;
+  }
 }
 @media screen and (max-width: 550px) {
+  .hero-p {
+    font-size: 1rem;
+  }
   .hero {
     height: 60vh;
   }
@@ -65,7 +71,7 @@
     margin-top: 0rem;
   }
   .hero-h1-first {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .hero-h1-second {
     font-size: 2rem;
