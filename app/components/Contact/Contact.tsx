@@ -67,7 +67,9 @@ const Contact = () => {
           variants={slideIn("left", "tween", 0.2, 1)}
           className="flex-[0.75] bg-black-100 m-12  p-8 rounded-2xl border border-black bg-gray-100"
         >
-          <h1 className="font-bold text-3xl">Контакт</h1>
+          <h1 className="font-bold text-3xl text-center">
+            Пошаљите нам поруку
+          </h1>
           <form
             action=""
             ref={formRef}
@@ -119,9 +121,71 @@ const Contact = () => {
         </motion.div>
         <motion.div
           variants={slideIn("right", "tween", 0.2, 1)}
-          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] xl:mt-16"
+          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] "
         >
-          <SolarCanvas />
+          <div className="flex-[0.75]  bg-black-100 m-12  p-8 rounded-2xl border border-black bg-gray-100  ">
+            <h1 className="font-bold text-3xl text-center mb-12">
+              Информације
+            </h1>
+            <div className="flex flex-col gap-5 mt items-start">
+              <h1
+                className="text-xl cursor-pointer hover:text-[#ffd400]"
+                onClick={() =>
+                  window.open(
+                    "https://maps.app.goo.gl/uyGRmdqgi7yHdipN6",
+                    "_blank"
+                  )
+                }
+              >
+                Адреса: Пролетерске Бригаде 45
+              </h1>
+              <h1
+                className="text-xl cursor-pointer hover:text-[#ffd400]"
+                onClick={() =>
+                  window.open(
+                    "https://maps.app.goo.gl/uyGRmdqgi7yHdipN6",
+                    "_blank"
+                  )
+                }
+              >
+                Поштански број: 17500 Врање
+              </h1>
+              <h1 className="text-xl cursor-pointer hover:text-[#ffd400]">
+                Радно време: Пон - Суб, 08:00 – 18:00 
+              </h1>
+              <h1 className="text-xl">
+                E-mail:{" "}
+                <a
+                  className="cursor-pointer hover:text-[#ffd400] "
+                  href="mailto:djordjevicsasa24@gmail.com"
+                >
+                  djordjevicsasa24@gmail.com
+                </a>
+              </h1>
+              <div className="flex">
+                <h1 className="text-xl">Телефон: </h1>
+                <div className="ml-1">
+                  <h1 className="text-xl">
+                    {" "}
+                    <a
+                      href="tel:+381605661344"
+                      className="cursor-pointer hover:text-[#ffd400] "
+                    >
+                      +381 60 566 13 44
+                    </a>
+                  </h1>
+                  <h1 className="text-xl">
+                    <a
+                      href="tel:+381612685093"
+                      className="cursor-pointer hover:text-[#ffd400] "
+                    >
+                      +381 61 268 50 93
+                    </a>{" "}
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </div>

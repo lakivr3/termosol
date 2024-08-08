@@ -8,7 +8,7 @@ import markerIconPng from "@/public/pop.png";
 import termosol from "@/public/termosol-logo.png";
 import Image from "next/image";
 
-const position: [number, number] = [42.526536, 21.88982];
+const position: [number, number] = [42.514356, 21.881336];
 
 const MyMap: React.FC = () => {
   return (
@@ -36,7 +36,7 @@ const MyMap: React.FC = () => {
               className="cursor-pointer"
               onClick={() =>
                 window.open(
-                  "https://maps.app.goo.gl/h5QU1L1kBCkDXZsv8",
+                  "https://maps.app.goo.gl/uyGRmdqgi7yHdipN6",
                   "_blank"
                 )
               }
