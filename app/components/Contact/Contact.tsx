@@ -89,13 +89,13 @@ const Contact = () => {
             </label>
 
             <label htmlFor="" className="flex flex-col">
-              <span className="text-black font-medium mb-4">Ваш Email</span>
+              <span className="text-black font-medium mb-4">Ваш e-mail</span>
               <input
                 type="email"
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="Који је Ваш email?"
+                placeholder="Који је Ваш e-mail?"
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-black rounded-lg outlined-none border border-black font-medium"
               />
             </label>
@@ -158,7 +158,7 @@ const Contact = () => {
               </h1>
 
               <h1 className="text-xl">
-                Е-маил:{" "}
+                Е-mail:{" "}
                 <a
                   className="cursor-pointer hover:text-[#ffd400] "
                   href="mailto:djordjevicsasa24@gmail.com"
