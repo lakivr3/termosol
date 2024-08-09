@@ -128,33 +128,37 @@ const Contact = () => {
               Информације
             </h1>
             <div className="flex flex-col gap-5 mt items-start">
-              <h1
-                className="text-xl cursor-pointer hover:text-[#ffd400]"
-                onClick={() =>
-                  window.open(
-                    "https://maps.app.goo.gl/uyGRmdqgi7yHdipN6",
-                    "_blank"
-                  )
-                }
-              >
-                Адреса: Пролетерске Бригаде 45
-              </h1>
-              <h1
-                className="text-xl cursor-pointer hover:text-[#ffd400]"
-                onClick={() =>
-                  window.open(
-                    "https://maps.app.goo.gl/uyGRmdqgi7yHdipN6",
-                    "_blank"
-                  )
-                }
-              >
-                Поштански број: 17500 Врање
-              </h1>
-              <h1 className="text-xl cursor-pointer hover:text-[#ffd400]">
-                Радно време: Пон - Суб, 08:00 – 18:00 
+              <h1 className="text-xl">
+                Адреса:{" "}
+                <span
+                  className="text-xl cursor-pointer hover:text-[#ffd400]"
+                  onClick={() =>
+                    window.open(
+                      "https://maps.app.goo.gl/uyGRmdqgi7yHdipN6",
+                      "_blank"
+                    )
+                  }
+                >
+                  Горњи Нерадовац бб
+                </span>
               </h1>
               <h1 className="text-xl">
-                E-mail:{" "}
+                Поштански број:{" "}
+                <span
+                  className="text-xl cursor-pointer hover:text-[#ffd400]"
+                  onClick={() =>
+                    window.open(
+                      "https://maps.app.goo.gl/uyGRmdqgi7yHdipN6",
+                      "_blank"
+                    )
+                  }
+                >
+                  17500 Врање
+                </span>
+              </h1>
+
+              <h1 className="text-xl">
+                Е-маил:{" "}
                 <a
                   className="cursor-pointer hover:text-[#ffd400] "
                   href="mailto:djordjevicsasa24@gmail.com"

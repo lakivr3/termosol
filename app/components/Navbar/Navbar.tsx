@@ -32,9 +32,6 @@ const Navbar = () => {
           <li className="text-nowrap">Адреса: Горњи Нерадовац бб, Врање</li>
           <li className="text-nowrap">МБ: 21179868</li>
           <li className="text-nowrap">ПИБ: 109425464</li>
-          <li className="text-nowrap">
-            <a href="tel:+381605661344">Тел: +381 60 566 13 44</a>
-          </li>
         </ul>
 
         <div className="flex w-[200px] nav-logo hover:cursor-pointer">
