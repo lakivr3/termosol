@@ -121,17 +121,17 @@ const Contact = () => {
         </motion.div>
         <motion.div
           variants={slideIn("right", "tween", 0.2, 1)}
-          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] "
+          className="xl:flex-1 xl:h-auto  "
         >
           <div className="flex-[0.75]  bg-black-100 m-12  p-8 rounded-2xl border border-black bg-gray-100  ">
             <h1 className="font-bold text-3xl text-center mb-12">
               Информације
             </h1>
             <div className="flex flex-col gap-5 mt items-start">
-              <h1 className="text-xl">
+              <h1 className="text-xl max-[500px]:text-base">
                 Адреса:{" "}
                 <span
-                  className="text-xl cursor-pointer hover:text-[#ffd400]"
+                  className="text-xl max-[500px]:text-base cursor-pointer hover:text-[#ffd400]"
                   onClick={() =>
                     window.open(
                       "https://maps.app.goo.gl/uyGRmdqgi7yHdipN6",
@@ -142,10 +142,10 @@ const Contact = () => {
                   Горњи Нерадовац бб
                 </span>
               </h1>
-              <h1 className="text-xl">
+              <h1 className="text-xl max-[500px]:text-base">
                 Поштански број:{" "}
                 <span
-                  className="text-xl cursor-pointer hover:text-[#ffd400]"
+                  className="text-xl max-[500px]:text-base cursor-pointer hover:text-[#ffd400]"
                   onClick={() =>
                     window.open(
                       "https://maps.app.goo.gl/uyGRmdqgi7yHdipN6",
@@ -157,7 +157,7 @@ const Contact = () => {
                 </span>
               </h1>
 
-              <h1 className="text-xl">
+              <h1 className="text-xl max-[500px]:text-base">
                 Е-mail:{" "}
                 <a
                   className="cursor-pointer hover:text-[#ffd400] "
@@ -167,9 +167,9 @@ const Contact = () => {
                 </a>
               </h1>
               <div className="flex">
-                <h1 className="text-xl">Телефон: </h1>
+                <h1 className="text-xl max-[500px]:text-base">Телефон: </h1>
                 <div className="ml-1">
-                  <h1 className="text-xl">
+                  <h1 className="text-xl max-[500px]:text-base">
                     {" "}
                     <a
                       href="tel:+381605661344"
@@ -178,7 +178,7 @@ const Contact = () => {
                       +381 60 566 13 44
                     </a>
                   </h1>
-                  <h1 className="text-xl">
+                  <h1 className="text-xl max-[500px]:text-base">
                     <a
                       href="tel:+381612685093"
                       className="cursor-pointer hover:text-[#ffd400] "
