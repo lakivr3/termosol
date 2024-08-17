@@ -43,7 +43,7 @@ const MyMap: React.FC = () => {
               src={termosol}
               width={200}
               height={150}
-              alt="termosol"
+              alt="termosol-solarni-kolektori"
             />
           </Popup>
         </Marker>

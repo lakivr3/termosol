@@ -8,7 +8,7 @@ const franklin = Libre_Franklin({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Termosol",
-  description: "Termosol",
+  description: "Solarni kolektori u Juznoj Srbiji,Tekosolar",
 };
 
 export default function RootLayout({

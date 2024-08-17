@@ -40,7 +40,7 @@ const Navbar = () => {
               setActive("/");
               route.push("/");
             }}
-            alt="logo"
+            alt="termosol-logo-solarni-kolektori"
             className="logo"
             src={logo}
             width={150}

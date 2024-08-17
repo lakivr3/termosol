@@ -76,7 +76,7 @@ const Pictures = () => {
                 className="item"
                 variants={slideIn("down", "tween", 0.2 * index, 1)}
               >
-                <img src={image} alt={`Picture ${index}`} />
+                <img src={image} alt={`solarni-kolektori-bojleri-${index}`} />
               </motion.div>
             ))}
           </motion.div>
@@ -96,7 +96,7 @@ const Pictures = () => {
           >
             {pictures.map((image: string, index: number) => (
               <motion.div key={index} className="item">
-                <img src={image} alt={`Picture ${index}`} />
+                <img src={image} alt={`solarni-kolektori-bojleri-${index}`} />
               </motion.div>
             ))}
           </motion.div>
